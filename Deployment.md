@@ -12,6 +12,19 @@ Services:
 - Render
 ---
 
+# Activities
+
+- Git
+    - Download Git
+    - Initialize our repository
+- GitHub
+    - Sign Up
+    - Sign In within VS Code
+    - Publish our repository
+
+
+---
+
 # Git Introduction
 
 - Booking System 01-01-2024
