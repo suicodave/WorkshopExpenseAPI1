@@ -54,6 +54,21 @@ https://git-scm.com/downloads
 
 ---
 
+# VS Code Sign in with GitHub
+
+![Sign In VSCode with GitHub](./Assets/vs%20code%20sign%20in%20github.png)
+
+---
+
+![Sign In select](./Assets/sign%20in%20with%20github%20select.png)
+
+---
+
+![Signed In VSCode](./Assets/signed%20in%20vs%20code.png)
+
+
+---
+
 # Render Introduction
 
 ![Render](./Assets/sharing%20laptop%202.png)
