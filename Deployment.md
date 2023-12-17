@@ -116,3 +116,13 @@ Create a `.gitignore` file in the working directory and exclude these folders an
 # Publish our repository to GitHub
 
 ![Publish repo](./Assets/publish.png)
+
+---
+
+![Select repo](./Assets/publish%20select%20repository.png)
+
+---
+
+# Confirm published repository in GitHub
+
+![Confirm published repository](./Assets/confirm%20published%20repo%20in%20github.png)
