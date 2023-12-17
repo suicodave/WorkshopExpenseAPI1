@@ -110,3 +110,9 @@ Create a `.gitignore` file in the working directory and exclude these folders an
 # Commit the changes
 
 ![First Commit](./Assets/first%20commit.png)
+
+---
+
+# Publish our repository to GitHub
+
+![Publish repo](./Assets/publish.png)
