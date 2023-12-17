@@ -21,6 +21,10 @@ Services:
     - Sign Up
     - Sign In within VS Code
     - Publish our repository
+- Render
+    - Sign in with GitHub
+    - Create and configure a new service
+    - Whitelist the IPs in Mongo DB
 
 
 ---
@@ -126,3 +130,58 @@ Create a `.gitignore` file in the working directory and exclude these folders an
 # Confirm published repository in GitHub
 
 ![Confirm published repository](./Assets/confirm%20published%20repo%20in%20github.png)
+
+---
+
+# Deployment with Render
+
+---
+
+# Sign In with GitHub
+
+![Sign in with GiHub](./Assets/render%20sign%20in%20with%20github.png)
+
+---
+
+# Create a new service
+![Create a new service](./Assets/render%20select%20service.png)
+
+---
+
+![Select a source](./Assets/render%20select%20source.png)
+
+---
+
+![Select repository](./Assets/render%20select%20repository.png)
+
+---
+
+![Configure service](./Assets/render%20configure%20service%201.png)
+
+---
+
+![Configure service 2](./Assets/render%20configure%20service%202.png)
+
+---
+
+# Configure Mongo DB connection
+
+![Configure service 3](./Assets/render%20configure%20service%203.png)
+
+---
+
+# Confirm deployment result
+
+![Deploy success](./Assets/render%20deploy%20success.png)
+
+---
+
+# Copy IP addresses to whitelist in Mongo DB
+
+![Copy ip address](./Assets/render%20copy%20ips%20for%20whitelisting.png)
+
+---
+
+# Confirm if the API can connect to Mongo DB
+
+![Confirm connectivity](./Assets/render%20confirm%20api%20if%20working.png)
