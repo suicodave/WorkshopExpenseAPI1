@@ -260,3 +260,128 @@ function App() {
     </table>  
 }  
 ```
+---
+
+# Commit the changes in Git 
+
+---
+
+# Saving an expense
+
+## Step 1 - Preparing input variables
+
+```diff
+// Step 4
+
+function App() {
+   const [expenses, setExpenses] = useState([]);
++  const [description, setDescription] = useState("");
++  const [amount, setAmount] = useState(0);
++  const [date, setDate] = useState(
++    new Date(Date.now()).toLocaleDateString("en-CA")
++  );
++  const [onSuccessfulSave,setOnSuccessfulSave] = useState(false);
+
+  ...
+}
+
+export default App;
+
+```
+---
+
+## Step 2 - Define the saveExpense function
+
+```diff
+function App() {
+  // Step 1
+  ...  
+
++  const saveExpense = async (event) => {
++    event.preventDefault();
+
++    const apiUrl = "http://localhost:1234";
+
++    const endpoint = `${apiUrl}/api/expenses`;
+
++    const expense = {
++      description: description,
++      amount: amount,
++      date: date,
++    };
+
++    await fetch(endpoint, {
++      method: "POST",
++      headers: {
++        "Content-Type": "application/json",
++      },
++      body: JSON.stringify(expense),
++    });
+
++    setOnSuccessfulSave(true);
++  };
+
+  return (
+    ...
+  );
+}
+
+export default App;
+
+```
+
+---
+
+## Step 3 - Bind input variables to the HTML inputs
+
+```diff
+  return (
+    <div>
++      <form onSubmit={saveExpense}>
+        <textarea
+          cols="30"
+          rows="10"
++          value={description}
++          onChange={(event) => setDescription(event.target.value)}
+        ></textarea>
+        <input
+          type="number"
++          value={amount}
++          onChange={(event) => setAmount(event.target.value)}
+        />
+        <input
+          type="date"
++          value={date}
++          onChange={(event) => setDate(event.target.value)}
+        />
+        <button>Save</button>
+      </form>
+
+      <h2>My Expenses</h2>
+
+      <table width="100%">
+        ...
+      </table>
+    </div>
+  );
+```
+---
+
+## Step 4 - Reloading expense data after saving a new expense
+
+```diff
+function App() {
+  ...
+
++  useEffect(()=>{
++    if(onSuccessfulSave){
++      fetchExpenses();
++    }
++  },[onSuccessfulSave])
+
+  return (
+    ...
+  );
+}
+```
+
