@@ -183,7 +183,7 @@ export default App;
 
 ---
 
-# Fetching the expense data from the API
+# Fetch the expense data from the API
 
 ```diff
 // Step 4
@@ -266,9 +266,9 @@ function App() {
 
 ---
 
-# Saving an expense
+# Save an expense
 
-## Step 1 - Preparing input variables
+## Step 1 - Prepare input variables
 
 ```diff
 // Step 4
@@ -367,7 +367,7 @@ export default App;
 ```
 ---
 
-## Step 4 - Reloading expense data after saving a new expense
+## Step 4 - Reload expense data after saving a new expense
 
 ```diff
 function App() {
@@ -384,4 +384,78 @@ function App() {
   );
 }
 ```
+---
+# Commit the changes in Git
 
+---
+
+# Change the API url with .env
+
+## Create a `.env` file
+`REACT_APP_API_URL=http://localhost:1234`
+
+## Add the `.env` file in `.gitignore`
+```diff
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+...
+
++ .env
+
+```
+---
+
+`App.js`
+
+```diff
+  const fetchExpenses = async () => {
+-    const apiUrl = "http://localhost:1234";
++    const apiUrl = process.env.REACT_APP_API_URL;
+
+    const endpoint = `${apiUrl}/api/expenses`;
+
+    const response = await fetch(endpoint);
+
+    const expenseData = await response.json();
+
+    setExpenses(expenseData);
+  };
+```
+---
+
+```diff
+const saveExpense = async (event) => {
+     event.preventDefault();
+-    const apiUrl = "http://localhost:1234";
++    const apiUrl = process.env.REACT_APP_API_URL;
+
+     const endpoint = `${apiUrl}/api/expenses`;
+
+    ...
+  };
+```
+---
+
+# Commit the changes in Git
+
+---
+
+# Publish the project on GitHub
+
+![Publish github](./Assets/ui/publish%20to%20github.png)
+
+---
+
+![Select repo](./Assets/ui/publish%20to%20github%20select%20repo.png)
+
+---
+
+# Check the project in GitHub
+![Confirm project](./Assets/ui/confirm%20github.png)
+
+---
