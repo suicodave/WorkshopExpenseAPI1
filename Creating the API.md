@@ -320,7 +320,7 @@ new command **`npm start`**
 Create a file **`.env`**
 
 ```
-DATABASE_URL=mongodb+srv://yourmongodb.com/?retryWrites=true&w=majority
+DATABASE_URL=mongodb+srv://expense_api_user:QB43T81ru6DjyjAQ@cluster0.ssxqkk1.mongodb.net/?retryWrites=true&w=majority
 ```
 
 **`DATABASE_URL`** is the environment variable
